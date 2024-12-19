@@ -18,4 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
             togglePasswordButton.textContent = 'Hiển thị mật khẩu';
         }
     });
+
+    
 });
