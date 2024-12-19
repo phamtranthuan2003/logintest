@@ -1,20 +1,20 @@
-console.log(7878978)
-document.addEventListener('DOMContentLoaded', function () {
 
+document.addEventListener('DOMContentLoaded', function () {
+// lay du lieu tu modol ==> controller ==> view
     const passwordField = document.getElementById('password');
     const togglePasswordButton = document.getElementById('hienmatkhau');
-    
-  
+// tao du kien khi bam se hanh dong buoc tiep theo
     togglePasswordButton.addEventListener('click', function () {
-
-        const currentType = passwordField.type;
-        
-    
-        if (currentType === 'password') {
+// laay du lieu cua cua mat khau tu modol ==> controller ==> view
+        const passwordType = passwordField.type;
+// khi bam nut neu thi`
+        if (passwordType === 'password') {
             passwordField.type = 'text';
+            
             togglePasswordButton.textContent = 'Ẩn mật khẩu'; 
         } else {
-            passwordField.type = 'password'; 
+            passwordField.type = 'password';
+            passwordagainField.type = 'password';
             togglePasswordButton.textContent = 'Hiển thị mật khẩu';
         }
     });

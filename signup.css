@@ -1,3 +1,4 @@
+
 {
     margin: 0;
     padding: 0;
@@ -9,11 +10,11 @@ html{
 }
 
 body{
-    background-color: #3342ff;
+    background-color: #f2e21d;
 }
-.container {
-    background-color: #ffffff;
-    max-width: 80rem;
+.Singup {
+    background-color: #17e7d1;
+    max-width: 20rem;
     margin: 10rem auto;
     padding: 2.4rem 1.8rem;
     border-radius: 10px;
@@ -31,7 +32,7 @@ input {
     font-size: 1.4rem;
     border-radius: 5px;
     border: 1px solid #777;
-    margin-bottom: 1rem;
+    margin-bottom: -2rem;
 }
 
 label {
@@ -39,22 +40,11 @@ label {
     font-size: 1.4rem;
     color: #555;
     margin-bottom: 0.5rem;
-
 }
-a{
-    text-decoration: none;
-}
-.quenmatkhau{
-    display: inline-block;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
 button{
     position: absolute;
-    right: 90px;  /* Cách cạnh phải 20px */
-    top: 28rem;    /* Cách cạnh trên 20px */
+    right: 35rem;  /* Cách cạnh phải 20px */
+    top: 23rem;    /* Cách cạnh trên 20px */
     padding: 5px 30px;
     font-size: 16px;
     background-color: #4CAF50;
