@@ -29,14 +29,20 @@ function nextStep() {
                 <input type="re-password" id="re-password" class="email" placeholder="Nhập lại mật khẩu">
             </form>
             
-            <button  class="btn-confirm" onclick="forgotPassword()">Xác nhận</button>
         `;
         currentStep++;
     }
 
 }
 
-function forgotPassword() {
-    console.log("forgotPassword");
-    window.location.href = "https://www.google.com.vn/?hl=vi";
+function onClickConfirm() {
+    if (currentStep<3) {
+        nextStep();
+    } else {
+        console.log('Go to Login Screen');
+        
+        window.location.href = 'login.html'
+
+        currentStep = 1;
+    }
 }
