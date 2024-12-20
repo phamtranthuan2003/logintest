@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>Đăng nhập</title>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2 class="login-title">Đăng Nhập</h2>
+        <form action="#" class="login-form">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="email" placeholder="Nhập email">
+
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" class="password" placeholder="Nhập mật khẩu">
+        </form>
+
+        <div class="forgot-password">
+            <a href="#" onclick="goToForgotPasswordScreen()">Quên mật khẩu?</a>
+        </div>
+
+        <button class="btn-login" onclick="onClickLogin()">Đăng nhập</button>
+
+        <div class="divider">Hoặc</div>
+
+        <div class="social-login">
+            <button class="social-btn facebook-btn">
+                <img src="../assets/images/facebook.png" alt="Facebook Icon">
+            </button>
+
+            <button class="social-btn google-btn">
+                <img src="../assets/images/google.png" alt="Google Icon">
+            </button>
+        </div>
+
+        <div class="signup">
+            Bạn chưa có tài khoản? 
+            <a href="#" onclick="goToSignupScreen()">Đăng ký</a>
+        </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+
+</html>
