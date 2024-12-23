@@ -126,4 +126,60 @@ body {
 .signup a:hover {
     text-decoration: underline;
 }
+.password-container {
+    position: relative;
+    width: 100%;
+}
 
+.password-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 7%;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+    color: #007BFF;
+    font-size: 16px;
+}
+
+.password-container .toggle-password::before {
+    content: '\1F441';
+    font-size: 20px;
+    color: #007BFF;
+}
+
+
+.password-container .toggle-password:hover::before {
+    color: #0056b3; 
+}
+
+
+.password-container .toggle-password:focus {
+    outline: none;
+    font-weight: bold;
+
+}
