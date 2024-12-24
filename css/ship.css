@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.service-description {
+    padding: 30px;
+    background-color: white;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.content-container {
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 28px;
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+strong {
+    color: #ff6f61;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-container p {
+    font-size: 14px;
+}

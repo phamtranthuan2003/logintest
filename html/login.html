@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
     <title>Đăng nhập</title>
 </head>
@@ -20,13 +20,14 @@
             <div class="password-container">
                 <input type="password" id="password" class="password" placeholder="Nhập mật khẩu">
                 <button type="button" id="toggle-password" class="toggle-password"></button>
-        </form>
+            </div> <!-- Đóng div password-container -->
+        </form> <!-- Đóng form -->
 
         <div class="forgot-password">
-            <a href="#" onclick="goToForgotPasswordScreen()">Quên mật khẩu?</a>
+            <a href="./confirm_email.html">Quên mật khẩu?</a>
         </div>
 
-        <button class="btn-login" onclick="onClickLogin()">Đăng nhập</button>
+        <button id="btn-login" class="btn-login" onclick="onClickLogin()">Đăng nhập</button>
 
         <div class="divider">Hoặc</div>
 
@@ -37,7 +38,9 @@
 
             <button class="social-btn google-btn" onclick="onClickLoginWithGoogle()">
                 <img src="../assets/images/google.png" alt="Google Icon">
+            </button>
         </div>
+
         <div class="signup">
             Bạn chưa có tài khoản? 
             <a href="#" onclick="goToSignupScreen()">Đăng ký</a>
