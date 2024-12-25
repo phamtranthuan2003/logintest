@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký</title>
+    <title>Đăng Ký</title>
     <link rel="stylesheet" href="../css/signup.css">
 </head>
 
 <body>
     <div class="signup-container">
         <h2 class="signup-title">Đăng Ký</h2>
-        <form action="#" class="signup-form">
+        <form action="#" class="signup-form" id="signupform">
             <label for="name">Họ tên</label>
             <input type="text" id="name" class="name" placeholder="Nhập họ tên">
 
@@ -20,12 +20,12 @@
 
             <label for="sex">Giới tính</label>
             <div class="sex-options">
-                    <div class="radio-group">
-                        <input type="radio" id="male" name="sex" class="sex" value="male"> Nam
-                    </div>
-                    <div class="radio-group">
-                        <input type="radio" id="female" name="sex" class="sex" value="female"> Nữ
-                    </div>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="sex" value="male"> Nam
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="female" name="sex" value="female"> Nữ
+                </div>
             </div>
 
             <label for="address">Địa chỉ</label>
@@ -39,15 +39,28 @@
 
             <label for="re-password">Nhập lại mật khẩu</label>
             <input type="password" id="re-password" class="re-password" placeholder="Nhập lại mật khẩu">
-        </form>
 
-        <button class="btn-signup" onclick="onClickSignup">Đăng ký</button>
+            <!-- Chọn vai trò của người dùng -->
+            <label for="role">Vai trò</label>
+            <div class="role-options">
+                <div class="radio-group">
+                    <input type="radio" id="admin" name="role" value="admin"> Admin
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="user" name="role" value="user" checked> User
+                </div>
+            </div>
+
+            <button class="btn-signup" type="submit">Đăng ký</button>
+        </form>
 
         <div class="login">
             Bạn đã có tài khoản?
             <a href="./login.html">Đăng nhập</a>
         </div>
     </div>
+
+    <script src="../js/signup.js"></script>
 </body>
 
 </html>
