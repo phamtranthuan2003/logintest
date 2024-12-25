@@ -5,9 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Thêm sự kiện click vào nút bật/tắt hiển thị mật khẩu
     togglePasswordButton.addEventListener('click', function () {
-        const passwordType = passwordField.type; // Lấy loại của trường nhập (password hoặc text)
-
-        if (passwordType === 'password') {
+        if (passwordField.type === 'password') {
             // Nếu loại là mật khẩu (password), chuyển sang dạng văn bản (text)
             passwordField.type = 'text';
             togglePasswordButton.textContent = ""; // Thay đổi nội dung của nút (tùy ý, hiện tại để trống)

@@ -1,4 +1,4 @@
-
+// Lấy danh sách người dùng từ localStorage hoặc khởi tạo mảng rỗng nếu không có dữ liệu
 const users = JSON.parse(localStorage.getItem('user'));
 console.log(users)
 // Hàm hiển thị danh sách người dùng
@@ -13,12 +13,12 @@ function displayUsers() {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${index + 1}</td>
-                <td>${user.name }</td>
+                <td>${user.name}</td>
                 <td>${user.birthday }</td>
                 <td>${user.sex }</td>
-                <td>${user.address }</td>
+                <td>${user.address}</td>
                 <td>${user.email }</td>
-                <td>${user.role }</td>
+                <td>${user.role}</td>
             `;
             userTableBody.appendChild(row);
         });
@@ -28,7 +28,6 @@ function displayUsers() {
         noDataRow.innerHTML = `<td colspan="7" style="text-align: center;">Không có dữ liệu người dùng.</td>`;
         userTableBody.appendChild(noDataRow);
     }
-    
 }
 
 // Hiển thị danh sách người dùng khi tải trang
