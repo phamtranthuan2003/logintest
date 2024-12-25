@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Quản Trị - Admin</title>
-    <link rel="stylesheet" href="../css/admin.css">
+    <title>Trang quản lý đơn hàng - Admin</title>
+    <link rel="stylesheet" href="../css/admin_order_management.css">
 </head>
 
 <body>
     <div class="sidebar">
         <div class="logo">
-            <h2>Admin Dashboard</h2>
+            <h2>Admin Order Management</h2>
         </div>
         <ul class="menu">
             <li><a href="./admin.html">Tổng quan</a></li>
@@ -24,52 +24,38 @@
     
     <div class="main-content">
         <header>
-            <h1>Tổng quan</h1>
+            <h1>Quản lý đơn hàng</h1>
         </header>
-        
-        <section class="statistics">
-            <div class="stat-card">
-                <h3>Người dùng</h3>
-                <p>150</p>
-            </div>
-            <div class="stat-card">
-                <h3>Đơn hàng</h3>
-                <p>320</p>
-            </div>
-            <div class="stat-card">
-                <h3>Doanh thu</h3>
-                <p>1,000,000 VNĐ</p>
-            </div>
-        </section>
-
-        <section class="latest-orders">
-            <h2>Đơn hàng gần đây</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Order ID</th>
-                        <th>Khách hàng</th>
-                        <th>Sản phẩm</th>
+                        <th>ID</th>
+                        <th>Tên Sản phẩm</th>
+                        <th>Hình ảnh</th>
+                        <th>Giá</th>
                         <th>Trạng thái</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>#101</td>
-                        <td>Nguyễn Văn A</td>
                         <td>Áo thun</td>
-                        <td>Đang xử lý</td>
+                        <td><img src="https://product.hstatic.net/1000026602/product/dsc03170_2dfd2355eeec459b8d7d634b0214d5ca_master.jpg"></td>
+                        <td>100.000 VND</td>
+                        <td>Đang giao</td>
                     </tr>
                     <tr>
                         <td>#102</td>
-                        <td>Trần Thị B</td>
-                        <td>Giày thể thao</td>
-                        <td>Hoàn thành</td>
+                        <td>Giày Sneaker</td>
+                        <td><img src="https://gman.vn/wp-content/uploads/2024/01/giay-sneaker-nam-cao-cap-g68.jpg"></td>
+                        <td>100.000 VND</td>
+                        <td>Đang giao</td>
                     </tr>
                     <tr>
                         <td>#103</td>
-                        <td>Phan Minh C</td>
-                        <td>Laptop</td>
+                        <td>Quần Jean</td>
+                        <td><img src="https://bizweb.dktcdn.net/100/216/592/products/464514698-122205222950044926-7732864641880078200-n-jpg-nc-cat-110-ccb-1-7-nc-sid-bd9a62-nc-ohc-may3-dvlgwoq7knvgeybvd0-nc-zt-23-nc-ht-scontent-fdad1-3-fna-nc-gid-aluxwza0yfzwi0xquebyajh-oh-00-aydsmfe8dxyc3womiuzwo2vw1ogrl.jpg?v=1730089376650"></td>
+                        <td>100.000 VND</td>
                         <td>Đang giao</td>
                     </tr>
                 </tbody>
