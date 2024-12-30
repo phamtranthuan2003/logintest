@@ -6,7 +6,9 @@ function goToForgotPasswordScreen() {
 function onClickLogin() {
     console.log('Nhấn nút Đăng nhập');
 }
-
+function goToSignupScreen(){
+  
+}
 function onClickLoginWithFacebook() {
     console.log('Nhấn nút Đăng nhập bằng Facebook');
     window.open('https://www.facebook.com/login', '_blank');

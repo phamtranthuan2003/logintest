@@ -17,40 +17,40 @@ body {
     width: 250px;
     background-color: #2d3e50;
     color: white;
-    padding: 20px;
-    display: flex;
+    padding-top: 40px;
+   
     flex-direction: column;
     align-items: center;
 }
 
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 .sidebar .logo h2 {
     font-size: 24px;
-    margin-bottom: 20px;
 }
 
 .sidebar .menu {
-    list-style: none;
-    width: 100%;
+    list-style-type: none;
+    padding-left: 0;
 }
 
 .sidebar .menu li {
-    width: 100%;
-    padding: 15px 20px;
-    margin: 10px 0;
-    background-color: #34495e;
-    text-align: center;
-    cursor: pointer;
-}
-
-.sidebar .menu li:hover {
-    background-color: #1abc9c;
+    margin: 15px 0;
 }
 
 .sidebar .menu li a {
     color: white;
     text-decoration: none;
+    padding: 10px 20px;
     display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
+
+
 
 /* Main Content */
 .main-content {
@@ -126,6 +126,77 @@ table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-table tr:hover {
-    background-color: #f1f1f1;
+
+/* Nút Thêm Sản phẩm */
+/* Nút thêm sản phẩm */
+
+
+
+
+.add-Product button:active {
+    transform: translate(2px, 2px); /* Hiệu ứng thu nhỏ di chuyển khi nhấn */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+/* Đặt khoảng cách giữa các nút */
+.btn-edit-delete {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các nút */
+    justify-content: center; /* Canh giữa các nút */
+    margin-top: 20px; /* Khoảng cách phía trên */
+}
+
+/* Cấu hình cho các nút */
+ button {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px; /* Bo tròn góc mạnh cho nút */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt */
+    text-transform: uppercase; /* Đổi chữ thành chữ hoa */
+    width: 120px;
+    text-align: center;
+}
+
+/* Nút Sửa */
+.edit-button {
+    background-color: #4CAF50; /* Màu xanh lá cây */
+    color: white;
+}
+
+
+.edit-button:active {
+    background-color: #388e3c; /* Màu tối hơn khi nhấn */
+    transform: translateY(1px); /* Hiệu ứng nhấn */
+}
+
+/* Nút Xóa */
+.delete-button {
+    background-color: #f44336; /* Màu đỏ */
+    color: white;
+}
+
+
+.delete-button:active {
+    background-color: #c62828; /* Màu tối hơn khi nhấn */
+    transform: translateY(1px); /* Hiệu ứng nhấn */
+}
+.add-Product button {
+    background: linear-gradient(45deg, #4CAF50, #3e8e41);
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Hiệu ứng mượt */
+    position: relative; /* Để hỗ trợ di chuyển */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+

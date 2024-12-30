@@ -11,59 +11,47 @@
 <body>
     <div class="sidebar">
         <div class="logo">
-            <h2>Admin Order Management</h2>
+            <h2>Admin Dashboard</h2>
         </div>
         <ul class="menu">
             <li><a href="./admin.html">Tổng quan</a></li>
             <li><a href="./admin_user_management.html">Quản lý người dùng</a></li>
             <li><a href="./admin_order_management.html">Quản lý đơn hàng</a></li>
-            <li><a href="#">Cài đặt</a></li>
+            <li><a href="./admin_setting_management.html">Cài đặt</a></li>
             <li><a href="login.html" onclick="logout()">Đăng xuất</a></li>
         </ul>
     </div>
     
-    <div class="main-content">
+    <div class="main-content">  
         <header>
             <h1>Quản lý đơn hàng</h1>
         </header>
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Tên Sản phẩm</th>
-                        <th>Hình ảnh</th>
-                        <th>Giá</th>
-                        <th>Trạng thái</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>#101</td>
-                        <td>Áo thun</td>
-                        <td><img src="https://product.hstatic.net/1000026602/product/dsc03170_2dfd2355eeec459b8d7d634b0214d5ca_master.jpg"></td>
-                        <td>100.000 VND</td>
-                        <td>Đang giao</td>
-                    </tr>
-                    <tr>
-                        <td>#102</td>
-                        <td>Giày Sneaker</td>
-                        <td><img src="https://gman.vn/wp-content/uploads/2024/01/giay-sneaker-nam-cao-cap-g68.jpg"></td>
-                        <td>100.000 VND</td>
-                        <td>Đang giao</td>
-                    </tr>
-                    <tr>
-                        <td>#103</td>
-                        <td>Quần Jean</td>
-                        <td><img src="https://bizweb.dktcdn.net/100/216/592/products/464514698-122205222950044926-7732864641880078200-n-jpg-nc-cat-110-ccb-1-7-nc-sid-bd9a62-nc-ohc-may3-dvlgwoq7knvgeybvd0-nc-zt-23-nc-ht-scontent-fdad1-3-fna-nc-gid-aluxwza0yfzwi0xquebyajh-oh-00-aydsmfe8dxyc3womiuzwo2vw1ogrl.jpg?v=1730089376650"></td>
-                        <td>100.000 VND</td>
-                        <td>Đang giao</td>
-                    </tr>
-                </tbody>
-            </table>
+        <section class="add-Product" >
+            <!-- Thay đổi button thành link để điều hướng -->
+            <a href="./admin_addproduct_management.html">
+                <button>Thêm sản phẩm</button>
+            </a>
         </section>
+        
+        <table id="addProduct"> 
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên Sản phẩm</th>
+                    <th>Hình ảnh</th>
+                    <th>Giá</th>
+                    <th>Trạng thái</th>
+                    <th>Tùy chỉnh</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
     </div>
 
-    <script src="../js/admin-dashboard.js"></script>
+    <script src="../js/admin_oder_management.js"></script>
 </body>
 
 </html>

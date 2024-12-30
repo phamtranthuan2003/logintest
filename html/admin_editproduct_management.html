@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh sửa sản phẩm</title>
+    <link rel="stylesheet" href="../css/admin_editproduct_management.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Chỉnh sửa sản phẩm</h1>
+        </header>
+
+        <form class="edit-product-form" id="editProductForm">
+            <div class="form-group">
+                <label for="productName">Tên sản phẩm:</label>
+                <input type="text" id="productName" name="productName" placeholder="Nhập tên sản phẩm" required>
+            </div>
+            <div class="form-group">
+                <label for="productImage">Hình ảnh sản phẩm:</label>
+                <input type="text" id="productImage" name="productImage" placeholder="URL hình ảnh sản phẩm" required>
+            </div>
+            <div class="form-group">
+                <label for="productPrice">Giá sản phẩm:</label>
+                <input type="number" id="productPrice" name="productPrice" placeholder="Nhập giá sản phẩm" required>
+            </div>
+            <div class="form-group">
+                <label for="productStatus">Trạng thái:</label>
+                <select id="productStatus" name="productStatus" required>
+                    <option value="Hiện" id="1">Hiện</option>
+                    <option value="Ẩn" id="0">Ẩn</option>
+                </select>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" class="btn-save">Lưu</button>
+                <button type="button" onclick="window.location.href='admin_order_management.html'" class="btn-cancel">Hủy</button>
+            </div>
+        </form>
+    </div>
+    <script src="../js/admin_editproduct_management.js"></script>
+</body>
+
+</html>

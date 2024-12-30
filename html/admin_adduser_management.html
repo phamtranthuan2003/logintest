@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh sửa người dùng</title>
+    <link rel="stylesheet" href="../css/admin_adduser_management.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Chỉnh sửa thông tin người dùng</h1>
+        <form action="" method="POST" id="editUserForm">
+            <!-- Thông tin người dùng -->
+            <div class="form-group">
+                <label for="userName">Họ Tên</label>
+                <input type="text" id="userName" name="userName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="userEmail">Ngày Sinh</label>
+                <input type="date" id="birhday" name="userEmail"  required>
+            </div>
+            <div class="form-group">
+                <label for="sex">Giới Tính</label>
+                <select id="sex" name="userStatus">
+                    <option value="male" selected>Nam</option>
+                    <option value="female">Nữ</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="userAddress">Địa chỉ</label>
+                <input type="text" id="userAddress" name="userAddress"  required>
+            </div>
+
+            <div class="form-group">
+                <label for="userRole">Vai trò</label>
+                <select id="userRole" name="userRole">
+                    <option value="admin" selected>Admin</option>
+                    <option value="user">User</option>
+                    <option value="moderator">Moderator</option>
+                </select>
+            </div>
+
+            
+
+            <!-- Nút lưu thay đổi -->
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Lưu thay đổi</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/admin_adduser_management.js"></script> 
+</body>
+
+</html>
