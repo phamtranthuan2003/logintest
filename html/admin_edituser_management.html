@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chỉnh sửa người dùng</title>
-    <link rel="stylesheet" href="../css/admin_adduser_management.css">
+    <link rel="stylesheet" href="../css/admin_edituser_management.css">
+    <title>Chỉnh Sửa Hồ Sơ Người Dùng</title>
 </head>
-
 <body>
+
     <div class="container">
-        <h1>Thêm người dùng</h1>
-        <form action="" method="POST" id="editUserForm" class="editUserForm">
-            <!-- Thông tin người dùng -->
+        <h2>Chỉnh Sửa Hồ Sơ</h2>
+        <form class="EditUserForm" id="EditUserForm">
             <div class="form-group">
                 <label for="userName">Họ Tên</label>
                 <input type="text" id="userName" name="userName" required>
@@ -20,11 +18,11 @@
 
             <div class="form-group">
                 <label for="userBirthday">Ngày Sinh</label>
-                <input type="date" id="userBirhday" name="userBirthday"  required>
+                <input type="date" id="userBirthday" name="userBirthday"  required>
             </div>
             <div class="form-group">
                 <label for="sex">Giới Tính</label>
-                <select id="userSex" name="userStatus">
+                <select id="userSex" name="userSex">
                     <option value="Nam" selected>Nam</option>
                     <option value="Nữ">Nữ</option>
                 </select>
@@ -40,7 +38,7 @@
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="userPassword" name="userPas"  required>
+                <input type="password" id="userPassword" name="userPassword"  required>
             </div>
 
             <div class="form-group">
@@ -50,17 +48,12 @@
                     <option value="user">User</option>
                 </select>
             </div>
-
-            
-
-            <!-- Nút lưu thay đổi -->
-            <div class="form-group">
-                <button type="button" class="submit-btn" id="adduser">Thêm người dùng</button>
+            <div class="form-buttons">
+                <button type="submit" class="btn-save">Lưu</button>
+                <button type="submit" onclick="window.location.href='admin_order_management.html'" class="btn-cancel">Hủy</button>
             </div>
         </form>
     </div>
-
-    <script src="../js/admin_adduser_management.js"></script> 
+    <script src="../js/admin_edituser_management.js"></script>
 </body>
-
 </html>

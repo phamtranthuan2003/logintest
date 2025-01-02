@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const productTableBody = document.querySelector('#addProduct tbody');
-    
+
     // Lấy danh sách sản phẩm từ localStorage
     const products = JSON.parse(localStorage.getItem('product')) || [];
 
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             row.innerHTML = `
                 <td>${index + 1}</td>
                 <td>${product.name}</td>
-                <td><img src="${product.image}" alt="${product.name}" style="width: 50px; height: 50px;"></td>
+                <td><img src="${product.image}" " style="width: 50px; height: 50px;"></td>
                 <td>${product.price}</td>
                 <td>${product.status}</td>
                 <td>
@@ -22,18 +22,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 </td>
             `;
             productTableBody.appendChild(row);
-            console.log(products)
         });
-    } 
+    }
     
     else {
         // Hiển thị thông báo nếu không có sản phẩm
         const noDataRow = document.createElement('tr');
         noDataRow.innerHTML = `<td colspan="6" style="text-align: center;">Không có sản phẩm nào.</td>`;
         productTableBody.appendChild(noDataRow);
-    }
+}
 
-    // Sử dụng event delegation để xử lý các nút "Sửa" và "Xóa"
+
     productTableBody.addEventListener('click', function (e) {
         const target = e.target;
 
@@ -47,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 index: productIndex,
                 product: productToEdit
             }));
-            console.log('Đã lưu thông tin chỉnh sửa:', productToEdit);
+      
 
             // Chuyển hướng đến trang chỉnh sửa
             window.location.href = "admin_editproduct_management.html";
@@ -66,4 +65,27 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+ 
+        // Hàm tìm kiếm sản phẩm
+        function searchProduct() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toLowerCase();
+            table = document.getElementById("addProduct");
+            tr = table.getElementsByTagName("tr");
+
+            // Lặp qua tất cả các hàng trong bảng và ẩn/hiện theo kết quả tìm kiếm
+            for (i = 1; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1]; // Tìm kiếm trong cột "Tên sản phẩm"
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }       
+            }
+        }
+  
 });

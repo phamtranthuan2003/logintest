@@ -4,9 +4,6 @@ console.log(users)
 // Hàm hiển thị danh sách người dùng
 function displayUsers() {
     const userTableBody = document.querySelector('#userTable tbody');
-
- 
-
     if (users.length > 0) {
         // Duyệt qua danh sách người dùng và tạo các dòng bảng
         users.forEach((user, index) => {
@@ -30,6 +27,9 @@ function displayUsers() {
     }
     
 }
+
+
+
 
 // Hiển thị danh sách người dùng khi tải trang
 window.onload = displayUsers;

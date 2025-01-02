@@ -24,16 +24,20 @@
 
     <div class="main-content">
         <header>
-            <h1>Quản lý người dùng</h1>
+            <h1 class="dsnd">Danh sách người dùng</h1>
+          
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm người dùng...">
+            </div>
         </header>
-        <section class="add-user">
+        <section class="add-user" >
             <a href="./admin_adduser_management.html">
-            <button onclick="openAddUserForm()">Chỉnh sửa người dùng</button>
+            <button>Thêm người dùng</button>
             </a>
         </section>
 
-        <section class="user-list">
-            <h2>Danh sách người dùng</h2>
+        <section>
+         
             <table id="userTable">
                 <thead>
                     <tr>
@@ -44,6 +48,7 @@
                         <th>Địa Chỉ</th>
                         <th>Email</th>
                         <th>Vai Trò</th>
+                        <th>Tùy Chỉnh</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -52,7 +57,7 @@
             </table>
     </div>
 
-    <!-- <script src="../js/admin_user_management.js"></script> -->
+    <script src="../js/admin_user_management.js"></script>
 </body>
 
 </html>

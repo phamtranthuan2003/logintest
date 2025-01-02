@@ -1,149 +1,214 @@
-/* Tổng thể giao diện */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f6f9;
-    margin: 0;
-    display: flex;
-    height: 100vh;
-}
+    /* Mặc định cho tất cả các phần tử */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-.sidebar {
-    background-color: #2d3e50;
-    width: 250px;
-    height: 100vh;
-    padding-top: 20px;
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        height: 100vh;
+        background-color: #f4f6f9;
+    }
 
-.sidebar .logo {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.sidebar .logo h2 {
-    font-size: 24px;
-}
-
-.sidebar .menu {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.sidebar .menu li {
-    margin: 15px 0;
-}
-
-.sidebar .menu li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: block;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-
-
-.main-content {
-    margin-left: 260px;
-    padding: 20px;
-    flex-grow: 1;
-    background-color: #f4f6f9;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-header h1 {
-    color: #2d3e50;
-}
-
-.user-list h2 {
-    color: #333;
-    margin-bottom: 20px;
-}
-
-button {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: white;
-}
-
-table thead {
-    background-color: #2d3e50;
-    color: white;
-}
-
-table th, table td {
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-
-
-
-.user-form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-.user-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.user-form input, .user-form select {
-    width: 100%;
-     padding: 10px;
-    margin: 8px 0;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-}
-
-.user-form button {
-    background-color: #16a085;
-    border-radius: 4px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-
-
-/* Responsive design */
-@media (max-width: 768px) {
+    /* Sidebar */
     .sidebar {
-        width: 200px;
+        width: 250px;
+        background-color: #2d3e50;
+        color: white;
+        padding-top: 40px;
+    
+        flex-direction: column;
+        align-items: center;
     }
 
+    .sidebar .logo {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .sidebar .logo h2 {
+        font-size: 24px;
+    }
+
+    .sidebar .menu {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .sidebar .menu li {
+        margin: 15px 0;
+    }
+
+    .sidebar .menu li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: block;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+
+
+    /* Main Content */
     .main-content {
-        margin-left: 220px;
+        flex: 1;
+        padding: 30px;
     }
 
-    button {
-        width: 100%;
+    header h1 {
+        font-size: 32px;
+        color: #333;
+        margin-bottom: 20px;
     }
-}
+
+    /* Thống kê */
+    .statistics {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    .stat-card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 30%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .stat-card h3 {
+        font-size: 20px;
+        color: #555;
+    }
+
+    .stat-card p {
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    /* Bảng đơn hàng */
+    .latest-orders h2 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    table thead {
+        background-color: #2d3e50;
+        color: white;
+    }
+
+    table th, table td {
+        padding: 12px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    tr>td>img {
+        width: 70px;
+        height: 70px;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+
+
+
+
+
+
+    .add-user button:active {
+        transform: translate(2px, 2px); /* Hiệu ứng thu nhỏ di chuyển khi nhấn */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    /* Đặt khoảng cách giữa các nút */
+    .btn-edit-delete {
+        display: flex;
+        gap: 10px; /* Khoảng cách giữa các nút */
+        justify-content: center; /* Canh giữa các nút */
+        margin-top: 20px; /* Khoảng cách phía trên */
+    }
+
+    /* Cấu hình cho các nút */
+    button {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 30px; /* Bo tròn góc mạnh cho nút */
+        cursor: pointer;
+        transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt */
+        text-transform: uppercase; /* Đổi chữ thành chữ hoa */
+    
+        text-align: center;
+    }
+
+    /* Nút Sửa */
+    .edit-button {
+        background-color: #4CAF50; /* Màu xanh lá cây */
+        color: white;
+    }
+
+
+    .edit-button:active {
+        background-color: #388e3c; /* Màu tối hơn khi nhấn */
+        transform: translateY(1px); /* Hiệu ứng nhấn */
+    }
+
+    /* Nút Xóa */
+    .delete-button {
+        background-color: #f44336; /* Màu đỏ */
+        color: white;
+    }
+
+
+    .delete-button:active {
+        background-color: #c62828; /* Màu tối hơn khi nhấn */
+        transform: translateY(1px); /* Hiệu ứng nhấn */
+    }
+    .add-user button {
+        background: linear-gradient(45deg, #4CAF50, #3e8e41);
+        color: white;
+        padding: 15px 20px;
+        font-size: 17px;
+        font-weight: bold;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease; /* Hiệu ứng mượt */
+        position: relative; /* Để hỗ trợ di chuyển */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    .search-container {
+        float: right;
+        margin-top: 20px;
+    }
+
+    #searchInput {
+        padding: 8px;
+        width: 200px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+
+
+
+
+

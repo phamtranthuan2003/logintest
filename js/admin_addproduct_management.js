@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             };
 
-            console.log(addProduct)
             // Lấy danh sách sản phẩm từ localStorage
             const listProduct = JSON.parse(localStorage.getItem('product')) || [];
 

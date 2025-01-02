@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('#productName').value = currentEdit.product.name;
         document.querySelector('#productPrice').value = currentEdit.product.price;
         document.querySelector('#productStatus').value = currentEdit.product.productStatus;
-        document.querySelector('#productImage').value = currentEdit.product.image; // Điền URL hình ảnh vào input
-        // (Giả sử hình ảnh là URL trong trường hợp này)
+        document.querySelector('#productImage').value = currentEdit.product.image;
+        
 
         // Lưu index của sản phẩm để cập nhật sau khi chỉnh sửa
         const productIndex = currentEdit.index;
@@ -47,6 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         // Nếu không có dữ liệu trong currentEdit
         alert('Không tìm thấy sản phẩm để chỉnh sửa!');
-        window.location.href = 'list_product.html'; // Quay lại trang danh sách sản phẩm nếu không có dữ liệu
+        window.location.href = 'admin_oder_management.html'; // Quay lại trang danh sách sản phẩm nếu không có dữ liệu
     }
 });

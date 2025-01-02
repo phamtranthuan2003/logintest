@@ -25,6 +25,10 @@
     <div class="main-content">  
         <header>
             <h1>Quản lý đơn hàng</h1>
+            <!-- Thêm ô tìm kiếm vào đây -->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..." onkeyup="searchProduct()">
+            </div>
         </header>
         <section class="add-Product" >
             <!-- Thay đổi button thành link để điều hướng -->
@@ -42,16 +46,38 @@
                     <th>Giá</th>
                     <th>Trạng thái</th>
                     <th>Tùy chỉnh</th>
-                   
                 </tr>
             </thead>
-            <tbody>
-               
+            <tbody class="body">
+                <!-- Nội dung sản phẩm sẽ được hiển thị ở đây -->
             </tbody>
         </table>
     </div>
 
     <script src="../js/admin_oder_management.js"></script>
+    <script>
+        // Hàm tìm kiếm sản phẩm
+        function searchProduct() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toLowerCase();
+            table = document.getElementById("addProduct");
+            tr = table.getElementsByTagName("tr");
+
+            // Lặp qua tất cả các hàng trong bảng và ẩn/hiện theo kết quả tìm kiếm
+            for (i = 1; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1]; // Tìm kiếm trong cột "Tên sản phẩm"
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }       
+            }
+        }
+    </script>
 </body>
 
 </html>
